@@ -98,7 +98,7 @@ python -m spacy download en_core_web_sm
 git clone https://github.com/MuhammadAliAsgher/Job-Recommender-NLP
 ```
 ```bash
-cd Digit-Recognition-Neural-Network
+cd Job-Recommender-NLP
 ```
 ### 2. Run the Notebook
 - Open `job-recommender-nlp.ipynb` in Jupyter Notebook or JupyterLab.
