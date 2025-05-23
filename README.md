@@ -1,15 +1,15 @@
-# 🔍 Job Recommender NLP: AI-Powered Job Matching with Sentence-BERT
+# 🔍 Job Recommender NLP: AI-Powered Job & Talent Matching with Sentence-BERT
 
 ## 📘 Overview
 
-This project builds an AI-powered job recommendation engine using Sentence-BERT embeddings to match job seekers’ resumes with job postings. It was developed as a demo on Kaggle to showcase the application of NLP in improving job matching beyond traditional keyword-based methods.
+This project builds an AI-powered job and resume recommendation engine using Sentence-BERT embeddings to match resumes with job postings and vice versa. It was developed as a demo on Kaggle to showcase how semantic similarity can improve both recruitment and job search over traditional keyword-based systems.
 
-The system processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) and the [Resume Dataset](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset), using embeddings to recommend the top 5 resumes for each job posting based on semantic similarity. It includes data preprocessing, embedding generation, similarity matching, evaluation, and visualization.
+The system processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings) and the [Resume Dataset](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset), using embeddings to recommend the top 5 matches in both directions (resumes per job, jobs per resume).
 
 ### 🔗 Links
 
 - 📘 Kaggle Notebook: [Job Recommender NLP](https://www.kaggle.com/code/muhammadaliasghar01/job-recommender-nlp/)
-- 💻 GitHub Repository: [Job-Recommender-NLP](https://github.com/MuhammadAliAsgher/Job-Recommender-NLP)
+- 💻 GitHub Repository: [Job-Recommender-NLP](https://github.com/MuhammadAliAsgher/Job-Recommender-NLP/)
 - 📄 LinkedIn Job Postings Dataset: [View Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
 - 📄 Resume Dataset: [View Dataset](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset)
 
@@ -17,10 +17,12 @@ The system processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](h
 
 ## 🔑 Key Features
 
-### 🧠 Job Recommendation Engine
+### 🧠 Bi-Directional Semantic Recommendation Engine
 
-- Matches **200 job postings** with **200 resumes** using semantic similarity.
-- Recommends the **top 5 resumes** per job posting based on cosine similarity scores.
+- Matches **1,000 job postings** with **1,000 resumes** using semantic similarity.
+- Recommends:
+  - **Top 5 resumes** for each job (recruiter perspective).
+  - **Top 5 job postings** for each resume (job-seeker perspective).
 
 ### ⚙️ Implementation Details
 
@@ -28,16 +30,17 @@ The system processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](h
 - Includes:
   - Text preprocessing with **spaCy** (lemmatization, skill/domain extraction)
   - Embedding generation for job postings and resumes
-  - Cosine similarity computation for matching
-  - Manual validation and average similarity score evaluation
+  - Cosine similarity computation
+  - Bidirectional recommendation output
+  - Manual validation and average similarity evaluation
 
 ---
 
 ## 📊 Evaluation
 
-- Processed **200 job postings** and **200 resumes** from public datasets.
+- Processed **1,000 job postings** and **1,000 resumes** from public datasets.
 - Evaluated with:
-  - Manual inspection of matches for **Jobs 0–2**
+  - Manual inspection of recommended resumes for **Job Postings 0, 1, and 2**
   - Average similarity scores:
 
 | Metric                 | Score  |
@@ -47,14 +50,13 @@ The system processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](h
 | Job 1 Avg Similarity   | 0.4035 |
 | Job 2 Avg Similarity   | 0.5161 |
 
-
 ---
 
 ## 📋 Results
 
 - **Job 0 and Job 2** show strong matches with high similarity scores.
-- **Job 1’s lower score (0.4035)** indicates dataset limitations (e.g., lack of relevant skills like installation in resumes).
-- The system effectively surfaces relevant matches beyond keyword-based methods, promoting diversity in candidate selection.
+- **Job 1’s lower score (0.4035)** indicates dataset limitations (e.g., resumes lacking key terms like "installation").
+- The system effectively surfaces relevant matches based on **semantic meaning**, supporting diversity in candidate selection and improving relevance in job recommendations.
 
 ---
 
@@ -108,3 +110,18 @@ cd Job-Recommender-NLP
 - Run the cells sequentially to preprocess data, generate embeddings, compute matches, evaluate, and visualize results.
 
 ---
+
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
+---
+
+## 🙋‍♂️ Contact
+
+Created by **Muhammad Ali Asghar**  
+📧 Connect on [LinkedIn](https://www.linkedin.com/in/muhammad-ali-asghar-82b87121b/)  
+🌐 Portfolio / GitHub: [github.com/MuhammadAliAsgher](https://github.com/MuhammadAliAsgher)
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" />
