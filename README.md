@@ -18,7 +18,6 @@ It processes a subset of the [LinkedIn Job Postings Dataset (2023-24)](https://w
 - 💻 **GitHub Repository**: [Job-Recommender-NLP](https://github.com/MuhammadAliAsgher/Job-Recommender-NLP)
 - 📄 **LinkedIn Job Postings Dataset**: [View Dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
 - 📄 **Resume Dataset**: [View Dataset](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset)
-- 🌐 **Deployed App**: [Streamlit App](#) *(to be updated post-deployment)*
 
 ---
 
