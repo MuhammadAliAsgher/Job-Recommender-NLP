@@ -1,10 +1,19 @@
 import streamlit as st
 import pandas as pd
 import PyPDF2
-import os
 from io import BytesIO
 from docx import Document
+import os
+import spacy
 from job_recommender_nlp import load_data_and_embeddings, recommend_for_uploaded_text, load_and_preprocess_data, generate_embeddings
+
+# Ensure spaCy model is installed
+try:
+    nlp = spacy.load('en_core_web_sm')
+except OSError:
+    st.info("Downloading spaCy model 'en_core_web_sm'...")
+    os.system("python -m spacy download en_core_web_sm")
+    nlp = spacy.load('en_core_web_sm')
 
 # Ensure working directory exists
 if not os.path.exists("./working"):
